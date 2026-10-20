@@ -3,7 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
+    output: "export",
+    images: { unoptimized: true },
   },
 } as NextConfig;
 
-export default nextConfig;
+module.exports = nextConfig;

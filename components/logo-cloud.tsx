@@ -10,11 +10,19 @@ export default function LogoCloud() {
   return (
     <section className="overflow-hidden">
       <div className="group relative m-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center justify-center">
+        <div
+          className="flex flex-col items-center justify-center"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
           {/* title */}
-          <H3 className="font-bold">Companies/NGOs Working with Us</H3>
+          <H3 className="font-bold">Companies & NGOs Working with Us</H3>
 
-          <div className="relative py-6 md:w-[calc(100%-11rem)]">
+          <div
+            className="relative py-6 md:w-[calc(100%-11rem)]"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
               {brandLogo.map((logo) => (
                 <Link href={logo.url} key={logo.id}>

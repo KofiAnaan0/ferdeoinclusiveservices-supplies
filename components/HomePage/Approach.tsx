@@ -21,12 +21,12 @@ const Approach = () => {
         </div>
 
         {/* Sticky Cards */}
-        <div className="pb-40">
+        <div>
           {approachData.map((item, index) => (
             <div
               key={item.id}
               className="sticky"
-              style={{ top: `${90 + index * 20}px` }}
+              // style={{ top: `${90 + index * 20}px` }}
             >
               <ApproachCard reversed={index % 2 !== 0} {...item} />
             </div>

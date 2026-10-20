@@ -14,12 +14,12 @@ export const navLinks = [
   {
     id: 2,
     label: "Our Impacts",
-    url: "#",
+    url: "/impact",
   },
   {
     id: 3,
     label: "About Us",
-    url: "#",
+    url: "/about",
   },
 ];
 

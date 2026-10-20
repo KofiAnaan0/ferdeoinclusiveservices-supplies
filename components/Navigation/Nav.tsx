@@ -94,9 +94,9 @@ const Nav = ({ navOpen }: Props) => {
           <Button
             variant="outline"
             size="default"
-            onClick={() => {
-              window.dispatchEvent(new CustomEvent("openChatWidget"));
-            }}
+            // onClick={() => {
+            //   window.dispatchEvent(new CustomEvent("openChatWidget"));
+            // }}
           >
             Contact Us
           </Button>
@@ -120,13 +120,22 @@ const Nav = ({ navOpen }: Props) => {
                 align="start"
                 className="w-[var(--radix-dropdown-menu-trigger-width)] min-w-full"
               >
-                <DropdownMenuItem onClick={() => router.push("/")}>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => router.push("/media")}
+                >
                   Inclusive Technology
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => router.push("/")}>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => router.push("/farm")}
+                >
                   Inclusive Farm Supplies
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => router.push("/")}>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => router.push("/industries")}
+                >
                   Inclusive Industries
                 </DropdownMenuItem>
               </DropdownMenuContent>

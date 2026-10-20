@@ -1,26 +1,36 @@
 "use client";
 
-import React from "react";
-import { Button } from "../ui/Button";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
-import H2 from "../ui/H2";
+
+import { Button } from "../ui/Button";
+import H3 from "../ui/H3";
+import P from "../ui/P";
 
 type ProductProps = {
   title: string;
+  info: string;
   description: string[];
   textColor: string;
   img: string;
+  url: string;
 };
 
-const ProductCard = ({ title, description, textColor, img }: ProductProps) => {
-  return (
-    <div className="flex flex-col justify-center md:justify-start items-center md:items-start p-4 gap-4 w-full">
-      {/* title */}
-      <H2 className="w-full">{title}</H2>
+const ProductCard = ({
+  title,
+  description,
+  textColor,
+  img,
+  info,
+  url,
+}: ProductProps) => {
+  const router = useRouter();
 
-      {/* hero image */}
+  return (
+    <div className="grid w-full items-center gap-8 p-2 md:grid-cols-2">
+      {/* Hero image */}
       <div
-        className="relative mx-auto max-w-4xl w-full aspect-video rounded-lg shadow-lg overflow-hidden"
+        className="relative aspect-video w-full overflow-hidden rounded-lg shadow-lg"
         data-aos="fade-up"
         data-aos-delay="150"
       >
@@ -28,33 +38,39 @@ const ProductCard = ({ title, description, textColor, img }: ProductProps) => {
           src={img}
           alt={title}
           fill
-          sizes="(max-width: 1024px) 100vw, 72vw"
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
-          priority
+          priority={false}
         />
       </div>
 
-      {/* description */}
-      <ul className="list-disc list-inside space-y-2 text-sm text-start w-full">
-        {description.map((item, index) => (
-          <li key={index} style={{ color: textColor }}>
-            {item}
-          </li>
-        ))}
-      </ul>
+      {/* Product information */}
+      <div className="space-y-2" data-aos="fade-up" data-aos-delay="150">
+        <H3 className="w-full font-bold">{title}</H3>
 
-      {/* CTA */}
-      <div className="flex justify-start md:justify-center items-start md:items-center space-y-4 md:space-y-0 md:space-x-4 pb-6 w-full">
-        <Button
-          variant="outline"
-          size="default"
-          className="w-fit"
-          onClick={() => {
-            window.dispatchEvent(new CustomEvent("openChatWidget"));
-          }}
-        >
-          Contact Us
-        </Button>
+        <div className="space-y-2">
+          <P className="text-start">{info}</P>
+
+          <ul className="w-full list-inside list-disc space-y-2 text-start text-sm">
+            {description.map((item, index) => (
+              <li key={index} style={{ color: textColor }}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Call to action */}
+        <div className="flex items-center justify-center md:justify-start">
+          <Button
+            variant="default"
+            size="default"
+            className="w-fit"
+            onClick={() => router.push(url)}
+          >
+            Learn More
+          </Button>
+        </div>
       </div>
     </div>
   );

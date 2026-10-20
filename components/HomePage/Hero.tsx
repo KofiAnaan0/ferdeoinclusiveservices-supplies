@@ -55,10 +55,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <Section className="pt-36 md:pt-38 ">
+    <Section className="pt-36 md:pt-30 bg-white">
       {/* main content */}
-      <Main data-aos="fade-up">
-        <div>
+      <Main>
+        <div data-aos="fade-up" data-aos-delay="150">
           {/* Title */}
           <H1 className="mb-2">
             Inclusive Growth.{" "}
@@ -74,8 +74,53 @@ const Hero = () => {
           </P>
         </div>
 
+        {/* hero image */}
+        {/* <div
+          ref={videoRef}
+          className="mx-auto flex items-center justify-center max-w-4xl w-full"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <Image
+            src={HeroImage}
+            alt="Hero"
+            className="w-full h-auto rounded-lg shadow-lg"
+            priority
+          />
+        </div> */}
+        {/* video explanation */}
+        <div
+          ref={videoRef}
+          className="mx-auto flex items-center justify-center max-w-4xl w-full"
+        >
+          <div
+            className="relative w-full"
+            style={{ paddingBottom: "56.25%" }}
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/c-UFyQBy7fA?si=I7TOgGQqq2DEKyiV"
+              // {
+              // 	isVisible
+              // 		? "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr?autoplay=1&mute=1&playsinline=1"
+              // 		: "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr?mute=1&playsinline=1"
+              // }
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+
         {/* CTA */}
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 pb-6 w-full">
+        <div
+          className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 pb-6 w-full"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
           <div
             onMouseEnter={handleEnter}
             onMouseLeave={handleLeave}
@@ -92,15 +137,24 @@ const Hero = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
-                className="w-[var(--radix-dropdown-menu-trigger-width)] min-w-full"
+                className="w-[var(--radix-dropdown-menu-trigger-width)] min-w-full cursor-pointer"
               >
-                <DropdownMenuItem onClick={() => router.push("/")}>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => router.push("/media")}
+                >
                   Inclusive Technology
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => router.push("/")}>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => router.push("/farm")}
+                >
                   Inclusive Farm Supplies
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => router.push("/")}>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => router.push("/industries")}
+                >
                   Inclusive Industries
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -118,45 +172,6 @@ const Hero = () => {
             Contact Us
           </Button>
         </div>
-
-        {/* hero image */}
-        <div
-          ref={videoRef}
-          className="mx-auto flex items-center justify-center max-w-4xl w-full"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <Image
-            src={HeroImage}
-            alt="Hero"
-            className="w-full h-auto rounded-lg shadow-lg"
-            priority
-          />
-        </div>
-
-        {/* video explanation
-        <div
-          ref={videoRef}
-          className="mx-auto flex items-center justify-center max-w-4xl w-full"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-              src="https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr"
-              // {
-              // 	isVisible
-              // 		? "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr?autoplay=1&mute=1&playsinline=1"
-              // 		: "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr?mute=1&playsinline=1"
-              // }
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div> */}
       </Main>
     </Section>
   );

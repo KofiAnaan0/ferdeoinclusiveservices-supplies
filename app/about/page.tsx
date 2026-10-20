@@ -8,95 +8,107 @@ import { socialLinks } from "@/data/footerData";
 import React from "react";
 
 const AboutPage = () => {
-	return (
-		<Section className="pt-36 md:pt-38">
-			<Main className="bg-[#7a2a0e] rounded-[32px]">
-				<div className="flex flex-col gap-6 max-w-lg mx-auto">
-					{/* description */}
-					<div>
-						<H2>Our Believe</H2>
-						<div className="space-y-3">
-							<P>
-								We believe the next major leap in AI across Africa will not
-								happen through text alone — it will happen through voice.
-							</P>
-							<P>
-								In the coming years, millions of businesses, creators, schools,
-								governments, and non-profit organizations across Africa will
-								adopt voice AI as part of everyday life. Virtual AI assistants
-								will handle customer support in local languages. AI avatars will
-								train employees, teach students, and deliver healthcare
-								information in culturally familiar voices. Creators will produce
-								content that speaks directly to communities in the languages,
-								accents, and expressions people truly connect with.
-							</P>
-							<P>
-								But for this future to exist, Africa needs its own speech
-								infrastructure.
-							</P>
-						</div>
-					</div>
+  return (
+    <Section className="pt-36 md:pt-30 ">
+      <Main className="bg-white">
+        <div className="flex flex-col gap-6 mx-auto">
+          {/* founder */}
+          <div className="space-y-2" data-aos="fade-up">
+            <H2>Founder, Managing Director and CEO</H2>
+            {/* description */}
+            <P className="max-w-2xl mx-auto">
+              Mr. Alafi Patrick Ceaser is the Founder, Managing Director and
+              Chief Executive Officer of FERDEO Inclusive Services and Supplies
+              Limited.
+            </P>
+          </div>
 
-					{/* The problem */}
-					<div>
-						<H2>The Problem</H2>
-						<div className="space-y-3">
-							<P>
-								Today, most voice AI systems are built primarily for a small
-								number of global languages and accents. Thousands of African
-								languages remain underserved, underrepresented, or completely
-								ignored. Yet language is more than communication — it carries
-								identity, culture, emotion, trust, and belonging.
-							</P>
-							<P>
-								We believe Africa deserves speech AI that sounds natural,
-								emotionally expressive, and culturally aware — AI that feels
-								less like a machine and more like speaking to someone from your
-								own community.
-							</P>
-							<P>That is why Realistic Labs exists.</P>
-						</div>
-					</div>
+          {/* video explanation */}
+          <div className="mx-auto flex items-center justify-center max-w-4xl w-full">
+            <div
+              className="relative w-full"
+              style={{ paddingBottom: "56.25%" }}
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <iframe
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.youtube.com/embed/fnszQDzXFJw?si=GsGjbOWCYD6ujmsY"
+                // {
+                // 	isVisible
+                // 		? "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr?autoplay=1&mute=1&playsinline=1"
+                // 		: "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr?mute=1&playsinline=1"
+                // }
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
 
-					{/* The solution */}
-					<div>
-						<H2>The Solution</H2>
+          {/* Vision */}
+          <div data-aos="fade-up" data-aos-delay="150">
+            <H2>Our Vision</H2>
+            <div className="max-w-xl mx-auto">
+              <P className="pt-2">
+                To become a leading inclusive business solutions company in
+                Uganda, delivering professional services, innovative products
+                and reliable supply solutions that create economic opportunities
+                and sustainable development.
+              </P>
+            </div>
+          </div>
 
-						<div className="space-y-3">
-							<P>
-								At Realistic Labs, we are building realistic multilingual speech
-								models for 2,000+ African languages and accents. Our mission is
-								to power the next generation of creators, businesses, AI agents,
-								educators, and non-profit organizations with voice technology
-								that truly understands Africa.
-							</P>
-							<P>
-								We are not simply building text-to-speech systems. We are
-								building Africa&apos;s voice layer for the AI era.
-							</P>
-							<P>
-								If you believe the future of AI should speak African languages
-								naturally, preserve culture, and unlock opportunity for millions
-								across the continent — we invite you to invest in that future
-								with us.
-							</P>
-						</div>
-					</div>
+          {/* The Mission */}
+          <div data-aos="fade-up" data-aos-delay="150">
+            <H2>Our Mission</H2>
+            <div className="max-w-xl mx-auto">
+              <P className="pt-2">
+                To deliver high-quality, inclusive and sustainable professional
+                services, manufactured products and agricultural supply
+                solutions while creating employment, developing talent,
+                strengthening enterprises, promoting innovation and advancing
+                inclusive economic development.
+              </P>
+            </div>
+          </div>
 
-					{/* CAT */}
-					<div>
-						<H2>Invest in Realistic Labs</H2>
-						<P>The future of AI in Africa will speak with an African voice.</P>
+          {/* The solution */}
+          <div data-aos="fade-up" data-aos-delay="150">
+            <H2>Our Approach </H2>
 
-						{/* CAT */}
-						<div className="mt-8 flex justify-center">
-							<Button>Invest in Us</Button>
-						</div>
-					</div>
-				</div>
-			</Main>
-		</Section>
-	);
+            <div className="max-w-xl mx-auto pt-2">
+              <ul className="list-disc list-inside space-y-2 text-md text-center text-[#1B3A6B]">
+                <li>Identify Potential.</li>
+                <li>Develop Capability.</li>
+                <li>Create Opportunity.</li>
+                <li>Expect Excellence.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* CAT */}
+          <div data-aos="fade-up" data-aos-delay="150">
+            <H2>Our Core Values</H2>
+            <P>
+              Inclusion, Integrity, Professionalism, Excellence, Accountability
+              & Innovation
+            </P>
+
+            {/* CAT */}
+            {/* <div
+              className="mt-8 flex justify-center"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <Button>Invest in Us</Button>
+            </div> */}
+          </div>
+        </div>
+      </Main>
+    </Section>
+  );
 };
 
 export default AboutPage;

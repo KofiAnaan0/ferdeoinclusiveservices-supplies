@@ -1,40 +1,37 @@
-// components/impact/Impact.tsx
 "use client";
 
-import { ImpactCardProps } from "@/components/helper/ImpactCard";
 import ImpactSection from "@/components/HomePage/Impact";
 import Section from "@/components/ui/Section";
 
-const VOICE_PARAGRAPHS = [
-  `We believe the next major leap in AI across Africa will not come from text — it will come from voice. In the coming years, voice AI will become deeply embedded in everyday life, powering how businesses serve customers, how educators teach, how governments communicate, and how creators reach their audiences. From virtual assistants in local languages to AI avatars delivering training and healthcare information, voice will become the most natural interface between people and technology across the continent.`,
-  `Yet for this future to exist, Africa needs its own speech infrastructure. Today's voice AI systems are largely built for a handful of global languages, leaving thousands of African languages and accents underrepresented or entirely absent. But language is more than communication — it carries identity, culture, emotion, trust, and belonging. Without it, AI risks sounding foreign in the very places it is meant to serve.`,
-  `At Realistic Labs, we are building realistic multilingual speech models for 2,000+ African languages and accents — creating voice AI that sounds natural, expressive, and culturally aware. We are building the voice layer for Africa's AI era, powering creators, businesses, educators, AI agents, and organizations with technology that truly speaks like us, not just to us.`,
-];
-
-const DEFAULT_VIDEO_SRC =
-  "https://www.youtube.com/embed/FKYMZzve1p8?si=wbGEkEv60KfdXQSr";
-
-const defaultCard: ImpactCardProps = {
-  paragraphs: VOICE_PARAGRAPHS,
-  videoSrc: DEFAULT_VIDEO_SRC,
-};
-
-const IMPACT_SECTIONS: { title: string; cards: ImpactCardProps[] }[] = [
+const IMPACT_SECTIONS = [
   {
-    title: "ICT Training Impact",
-    cards: [defaultCard, defaultCard],
-  },
-  {
-    title: "Industrial Training Impact",
-    cards: [defaultCard, defaultCard],
+    id: "voice-impact",
+    title: "Our Impact Stories",
+    cards: [
+      {
+        id: "1",
+        desc: "What happens when opportunity meets determination? Meet Ababiku Jackline, a woman with a physical disability who turned her advanced computer training at FARDEO into a life-changing opportunity. Today, she runs her own computer centre in Pakele Town Council, earns her own income, and is building a future on her own terms. Her story is proof that with the right skills and opportunity, independence is possible.",
+        img: "/jackie.jfif",
+      },
+      {
+        id: "2",
+        desc: "In 2013, Adebasiku Faustine lost his sight, making everyday tasks like reading, writing, and using digital devices a challenge. But his story did not end there. After completing FARDEO’s basic computer training in February 2026, he can now use a computer to write reports in his role as Chairperson of the Adjumani Association of the Blind. What once seemed out of reach has become possible again—not because his circumstances changed, but because he gained new skills to navigate them.",
+        img: "/faustine.jfif",
+      },
+      {
+        id: "3",
+        desc: "A physical disability has not stopped Mr. Idibu from pursuing his independence. Through determination and practical skills, he mastered riding a tricycle and now works with FARDEO Inclusive Supplies Limited, transporting produce to market. Today, his skills provide him with a source of income and a greater sense of independence. His journey shows what becomes possible when people are given the opportunity to learn, work, and build a livelihood with dignity.",
+        img: "/idibu.jfif",
+      },
+    ],
   },
 ];
 
 export default function Impact() {
   return (
-    <Section className="pt-36 md:pt-38">
+    <Section className="pt-36 md:pt-30">
       {IMPACT_SECTIONS.map((section) => (
-        <ImpactSection key={section.title} {...section} />
+        <ImpactSection key={section.id} {...section} />
       ))}
     </Section>
   );
